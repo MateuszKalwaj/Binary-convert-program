@@ -20,7 +20,10 @@ public class TaskOne {
         if (userNumber == 42){
             System.out.println("Finally! Program is done.");
             break;
+        } else {
+            System.out.println(userNumber);
         }
+
     }
     }
 }

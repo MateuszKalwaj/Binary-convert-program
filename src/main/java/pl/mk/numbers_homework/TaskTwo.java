@@ -32,8 +32,9 @@ public class TaskTwo {
         for (int i = 1; i < index.length; i++) {
             if (min > index[i]) {
                 min = index[i];
-            } else if (max < index[i])
+            } else if (max < index[i]) {
                 max = index[i];
+            }
         }
         //print the values
         System.out.println("Max number is: " + max);

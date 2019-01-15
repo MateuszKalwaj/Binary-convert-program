@@ -4,13 +4,11 @@ import java.util.Scanner;
 
 public class TaskThree {
     /**
-     *
      * @param args supplies command-line arguments as an array of String object
-     *
      */
     public static void main(String[] args) {
         //scanner implementation- for user input
-        Scanner userInput = new Scanner (System.in);
+        Scanner userInput = new Scanner(System.in);
 
         System.out.println("Enter number from 1 to 15. I will convert it to binary");
         int number = userInput.nextInt();
@@ -22,17 +20,16 @@ public class TaskThree {
             //new array need tobe created for userInput data storage (4 bits reserved)
             int[] binArray = new int[4];
 
+            System.out.print("Your number (" + number + ") in binary is: ");
             //filling array with user inputs. variable for iteration is provided
-           int i = 0;
-           while (number > 0) {
-               binArray[i] = number % 2;
-               i++;
-               number = number/2;
-           }
-            System.out.println("Your number in binary is: ");
-           //iteration through the array
-           for (int x = i-1; x >= 0; x--)
-               System.out.print(binArray[x]);
+
+            for (int i = 0; i < binArray.length; i++) {
+                binArray[i] = number % 2;
+                number /= 2;
+            } for (int i= 3; i >=0; i--){
+                System.out.print(binArray[i]);
+            }
+
         }
     }
 
